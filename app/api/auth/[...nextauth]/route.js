@@ -3,7 +3,8 @@ import GithubProvider from 'next-auth/providers/github'
 import GoogleProvider from 'next-auth/providers/google'
 import CredentialsProvider from "next-auth/providers/credentials"
 
-const JAVA_URL = "http://localhost:8080"
+// const JAVA_URL = "http://localhost:8080"
+const JAVA_URL = process.env.NEXT_PUBLIC_JAVA_BACKEND_URL || "http://localhost:8080";
 
 const handler = NextAuth({
     secret: process.env.NEXTAUTH_SECRET,

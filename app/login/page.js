@@ -12,7 +12,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Bounce } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-const JAVA_URL = "http://localhost:8080"
+// const JAVA_URL = "http://localhost:8080"
+const JAVA_URL = process.env.NEXT_PUBLIC_JAVA_BACKEND_URL || "http://localhost:8080";
 
 const MODE = {
     LOGIN: "LOGIN",

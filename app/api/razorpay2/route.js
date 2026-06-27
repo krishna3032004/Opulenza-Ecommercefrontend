@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-const JAVA_URL = "http://localhost:8080"
+// const JAVA_URL = "http://localhost:8080"
+const JAVA_URL = process.env.NEXT_PUBLIC_JAVA_BACKEND_URL || "http://localhost:8080";
 
 export const POST = async (req) => {
     let body = await req.formData()

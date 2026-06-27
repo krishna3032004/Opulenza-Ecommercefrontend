@@ -1,6 +1,7 @@
 'use client'
 
-const BASE_URL = "http://localhost:8080"
+// const BASE_URL = "http://localhost:8080"
+const BASE_URL = process.env.NEXT_PUBLIC_JAVA_BACKEND_URL || "http://localhost:8080";
 
 const getToken = () => {
     if (typeof window !== "undefined") {
@@ -344,4 +345,17 @@ export const sendVerificationEmail = async (email) => {
     // OTP session mein store karna padega (backend se nahi milta directly)
     // Java backend sends email directly, frontend just waits for user to enter OTP
     return true
+}
+
+
+export const sendReviewEmail = async (email, cartItems) => {
+    try {
+        await fetch(`${BASE_URL}/api/reviews/send-email`, {
+            method: "POST",
+            headers: authHeaders(),
+            body: JSON.stringify({ email, cartItems })
+        })
+    } catch (e) {
+        console.log("Review email error:", e)
+    }
 }
