@@ -10,7 +10,6 @@ A fully functional e-commerce web application built with Next.js frontend and Ja
 
 | Part | Repo |
 |------|------|
-<!-- | Frontend (Next.js) | [Opulenza-app-using-next.js](https://github.com/krishna3032004/Opulenza-app-using-next.js-) | -->
 | Backend (Java Spring Boot) | [Opulenza-Java_backend](https://github.com/krishna3032004/Opulenza-Java_backend) |
 
 ---
